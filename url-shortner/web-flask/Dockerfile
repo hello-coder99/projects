@@ -1,8 +1,10 @@
-FROM my_custom_python:latest
+FROM python:3.10-slim
 
 WORKDIR /jack
 
 COPY . .
+
+RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 5000
 
